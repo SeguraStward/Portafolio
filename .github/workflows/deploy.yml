@@ -29,6 +29,6 @@ jobs:
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/portafolio:v1
 
-      # NUEVO PASO: Avisar a Render que despliegue
+      # i found this hook so render listen when i push to the project
       - name: Trigger Deployment to Render
         run: curl ${{ secrets.RENDER_DEPLOY_HOOK }}
